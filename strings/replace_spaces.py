@@ -9,8 +9,12 @@ from unittest import TestCase
 
 
 def replace_spaces(chars, size):
+    if not chars:
+        return chars
+
     p = -1
 
+    # iterate the chars variable backwards
     for i in range(size - 1, -1, -1):
         if chars[i] == ' ':
             chars[p] = '0'
